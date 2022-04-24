@@ -8,6 +8,7 @@ public class jung_549 {
         int n, sum = 0, add, cnt = 0;
         Scanner sc = new Scanner(System.in);
         n = sc.nextInt();
+        sc.close();
     
         for(add = 1; sum < n; add += 2) {
             sum += add;
