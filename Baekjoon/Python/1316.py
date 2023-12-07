@@ -2,21 +2,14 @@ sum = int(input())
 num = sum
 new_list = []
 
+# 입력한 숫자만큼 입력받기
 for i in range(num):
+    # 문자열 입력 받으면 리스트로 변환
     word = list(input())
 
     new_list.append(word[0])
-    for j in range(1, len(word)):
-
-        # 이전 리스트 값과 비교했을 때 다르면
-        if word[j] != word[j - 1]:
-
-            # 기존 new_list에 있던 값인지 체크 - 없으면
-            if new_list.count(word[j]):
-                new_list.append(word[j])
-            # 기존 new_list에 있으면 (그룹 단어가 아니면)
-            else:
-                sum -= 1
-                break
+    for i in range(1, len(word)):        
+        if word[j] == word[j-1]:
+            
 
 print(sum)
